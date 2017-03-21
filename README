@@ -1,0 +1,46 @@
+Hi, contained in this archive is the source for a utility called Expert
+Guide, a text mode Norton Guide reader for OS/2.
+
+Eg started life as a bit of C code that did nothing more than dump the
+contents of a NG menu structure to stdout, then a messed around a little
+more, added a little here, added a little there, and I ended up with all
+this C++ code. The state of the code (and the design) shows that it EG
+was not very well planned from the start, but I'm making it available
+in the hope that it might a) be of use to someone as a utility and 
+b) the source may be of use to anyone wanting to dig into the structure
+of Norton Guide files.
+
+The best way to use EG is to stick it in the same directory as your NG
+files. When you first start it use:
+
+	eg c:\ng\myguide.ng
+
+From then on EG will remember in an INI file (called eg.ini, in the same
+directory as eg.exe) what guide you were last looking at. While running
+EG you can press Alt-D for a list of other available guies or you can
+press Ctrl-D to make it rescan the list (the list is held in eg.ini for
+speed reasons).
+
+And that's about it. It's missing a couple of things, not least of which
+is a search facilty, I may get round to putting this in one day.
+
+EG was written using EMX/GCC, I've included the Makefile. Note that if you
+have not made the omf libs for EMX will will either need to do so or you
+will need to change the Makefile so that it does not attempt to compile
+for and link against them
+
+I hope you find this of use.
+
+If you have any problems please feel free to mail me at:
+
+	davep@hagbard.demon.co.uk
+
+The most current version of EG will be available at:
+
+	http://www.acemake.com/hagbard/eg.html
+
+For other Norton Guide related utils take a look at:
+
+	http://www.acemake.com/hagbard
+
+I've got a Web based Norton Guide reader and a NG->HTML converter available.
